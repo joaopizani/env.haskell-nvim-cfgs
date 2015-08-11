@@ -27,7 +27,7 @@ What exactly is included?
 
 As said above, the functionalities are divided between plugin-independent and plugin-dependent.
 Unfortunately, there are (as of now) very few useful configs you can enable without using plugins,
-so it is advisable to manage plugins in your NeoVim setup using [NeoBundle](https://github.com/Shougo/neobundle.vim).
+so it is advisable to manage plugins in your NeoVim setup using [vim-plug](https://github.com/junegunn/vim-plug).
 
 ### Plugin-independent features ###
 As of now, there is only one very basic feature which is usable without ANY plugins installed
