@@ -1,10 +1,11 @@
-Reasonable compilation of Haskell Vim configs
-=============================================
+Reasonable compilation of Haskell NeoVim configs
+================================================
 
 What is this?
 -------------
-This repo is a compilation of the "best of the best" pieces of vim configuration that I have
-collected during the last one or two years of Haskell programming using Vim as a development
+
+This repo is a compilation of the "best of the best" pieces of NeoVim configuration that I have
+collected during the last one or two years of Haskell programming using NeoVim as a development
 environment. My choices regarding what to include here and HOW to include it are based on these
 guidelines:
 
@@ -12,25 +13,25 @@ guidelines:
     incurring in a lot of OS hacking, and provide reasonable comfort while developing.
 
   * **Independence:** As much as possible, features inside this "compilation" should work for any
-    distribution of Vim, and be helpful to as many Haskell programmers as possible, using the
+    distribution of NeoVim, and be helpful to as many Haskell programmers as possible, using the
     most diverse Vim environments and operating systems. The functionalities are divided in two
-    main and INDEPENDENT categories: plugin-independent and plugin-dependent.
+    main categories: plugin-independent and plugin-dependent.
 
   * **Graceful degradation:** This means that _as many_ features _as possible_ are enabled, but
-    very few requirements are made on your Vim environment or OS. If you don't have what it takes
+    very few requirements are made on your NeoVim environment or OS. If you don't have what it takes
     to use something, it will _just not be available, without annoying error messages_.
 
 
 What exactly is included?
 -------------------------
+
 As said above, the functionalities are divided between plugin-independent and plugin-dependent.
-Unfortunately, there is very few useful configs you can enable to help you without using plugins,
-so _it is advisable to manage plugins in your Vim setup using_
-[NeoBundle](https://github.com/Shougo/neobundle.vim).
+Unfortunately, there are (as of now) very few useful configs you can enable without using plugins,
+so it is advisable to manage plugins in your NeoVim setup using [NeoBundle](https://github.com/Shougo/neobundle.vim).
 
 ### Plugin-independent features ###
-As of now, there is only one very basic features which is usable without ANY plugin management
-in your Vim... I hope that in the near future more features become available as I find them out.
+As of now, there is only one very basic feature which is usable without ANY plugins installed
+in your NeoVim... I hope that in the near future more features become available as I find them out.
 
   * **Beautify current hs file:** The key sequence _\<leader\>hB_ is mapped to run the current
     Haskell source file being edited through the
@@ -41,18 +42,15 @@ in your Vim... I hope that in the near future more features become available as 
 
 ### Plugin-dependent features ###
 
-  * **Easy syntax and type-checking:** using the [GHC-Mod](https://github.com/eagletmt/ghcmod-vim)
-    plugin. It does require the ghc-mod Haskell package, which you can install symply using:
-    `cabal install ghc-mod`. This feature provides keybindings, which you can easily change by
-    editing the file "haskell-vim-plugin-dependent.vim".
-    - **F9**: Checks the current file using GHC-Mod (saves it if needed) and opens the QuickFix
-      window in case of any errors.
-    - **\<leader\>t**: Shows the type of the expression under the cursor. By pressing this repeatedly,
-      larger expressions are selected.
-    - **\<leader\>hr** Clears the selection made by the show-type command above.
-    - **\<leader\>hl** Runs _HLint_ in the currently-edited file, showing any possible suggestions
-      in the QuickFix list.
-    - **\<leader\>hm** Shows the expansion of a _Template Haskell_ splice in the QuickFix window.
+  * **Easy syntax and type-checking:** using the `ghc-modi` helper program.
+    It does require the ghc-mod Haskell package, which you can install symply using: `cabal install ghc-mod`.
+    This feature provides keybindings, which you can easily change by editing the file `plugin-cfgs/c10-ghc-modi.vim`.
+
+    + **F9**: Checks the current file using GHC-Mod (saves it if needed) and opens QuickFix in case of any errors.
+    + **\<leader\>t**: Shows the type of the expression under the cursor.
+      By pressing this repeatedly, larger expressions are selected.
+    + **\<leader\>hr** Clears the selection made by the show-type command above.
+    + **\<leader\>hl** Runs _HLint_ in the currently-edited file, showing any possible suggestions in QuickFix.
 
   * **Conceal-style displaying of nice Haskell symbols:** For those of you who don't know, Vim (7.3+)
     has a handy feature, [Conceal](http://vimdoc.sourceforge.net/htmldoc/version7.html#new-conceal),
