@@ -68,11 +68,6 @@ in your NeoVim... I hope that in the near future more features become available 
     nonsense = ⊥
     ```
 
-  * **Better syntax-based Haskell code-folding:** Vim has already some built-in syntax-based rules
-    for folding Haskell code, but they are not so good. We make it better by using the plugin
-    [vim-haskellFold](https://github.com/Twinside/vim-haskellFold), which _shows type signatures_
-    in the fold summary line, among other niceties.
-
   * **Automatically indert the module name header in a file:** When you create a new file in Vim, by
     using `:e File.hs`, the appropriate module name header will be inserted in the first line of the
     newly-created file, like `module File where`. Actually, the plugin is more intelligent than

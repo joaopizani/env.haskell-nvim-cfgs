@@ -1,5 +1,8 @@
-NeoBundle 'bitc/vim-hdevtools'
-NeoBundle 'feuerbach/vim-hs-module-name'
-NeoBundle 'joaopizani/vim-haskellConceal'
-NeoBundle 'vim-scripts/alex.vim'
-NeoBundle 'vim-scripts/happy.vim'
+Plug 'neovimhaskell/neovim-ghcmod'
+Plug 'neovimhaskell/haskell-vim'
+
+Plug 'feuerbach/vim-hs-module-name'
+Plug 'joaopizani/vim-haskellConceal'
+
+Plug 'vim-scripts/alex.vim'
+Plug 'vim-scripts/happy.vim'
